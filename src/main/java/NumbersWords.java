@@ -42,8 +42,10 @@ public class NumbersWords {
 
 
     Integer number = Integer.parseInt(userNumber);
+  
 
     char[] numberString = userNumber.toCharArray();
+
 
     String results = new String();
 
@@ -52,7 +54,7 @@ public class NumbersWords {
   } else if (number > 10 && number < 20) {
     results = teens.get(userNumber);
   } else if (number > 19 && number < 100) {
-    results = (tensDigits.get(numberString[0]) + " " + singleDigits.get(numberString[1]));
+    results = (tensDigits.get(Character.toString(numberString[0]))) + " " + singleDigits.get(Character.toString(numberString[1]));
   } else {
 
   }

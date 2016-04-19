@@ -21,5 +21,10 @@ public class NumbersWordsTest {
     String expected = "twenty one";
     assertEquals(expected, numbersWords.calculateNumber("21"));
   }
-
+  @Test
+  public void calculateNumber_forNumberTwentyThroughNinetyNine_99() {
+    NumbersWords numbersWords = new NumbersWords();
+    String expected = "ninety nine";
+    assertEquals(expected, numbersWords.calculateNumber("99"));
+  }
 }
