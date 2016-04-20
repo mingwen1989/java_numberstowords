@@ -8,6 +8,7 @@ public class NumbersWords {
   public static String calculateNumber(String userNumber) {
 
     HashMap<String, String> singleDigits = new HashMap<String, String>();
+    singleDigits.put("0", "");
     singleDigits.put("1", "one");
     singleDigits.put("2", "two");
     singleDigits.put("3", "three");
@@ -31,6 +32,8 @@ public class NumbersWords {
     teens.put("19", "nineteen");
 
     HashMap<String, String> tensDigits = new HashMap<String, String>();
+    tensDigits.put("0", "");
+    tensDigits.put("1", "ten");
     tensDigits.put("2", "twenty");
     tensDigits.put("3", "thirty");
     tensDigits.put("4", "forty");
@@ -40,9 +43,21 @@ public class NumbersWords {
     tensDigits.put("8", "eighty");
     tensDigits.put("9", "ninety");
 
+    HashMap<String, String> hundredsDigits = new HashMap<String, String>();
+    hundredsDigits.put("0", "");
+    hundredsDigits.put("1", "one hundred");
+    hundredsDigits.put("2", "two hundred");
+    hundredsDigits.put("3", "three hundred");
+    hundredsDigits.put("4", "four hundred");
+    hundredsDigits.put("5", "five hundred");
+    hundredsDigits.put("6", "six hundred");
+    hundredsDigits.put("7", "seven hundred");
+    hundredsDigits.put("8", "eight hundred");
+    hundredsDigits.put("9", "nine hundred");
+
 
     Integer number = Integer.parseInt(userNumber);
-  
+
 
     char[] numberString = userNumber.toCharArray();
 
@@ -55,7 +70,11 @@ public class NumbersWords {
     results = teens.get(userNumber);
   } else if (number > 19 && number < 100) {
     results = (tensDigits.get(Character.toString(numberString[0]))) + " " + singleDigits.get(Character.toString(numberString[1]));
-  } else {
+  } else if (number > 99 && number < 1000) {
+    results = (hundredsDigits.get(Character.toString(numberString[0])) + " " + tensDigits.get(Character.toString(numberString[1])) + " " + singleDigits.get(Character.toString(numberString[2])));
+  }
+
+  else {
 
   }
     return results;

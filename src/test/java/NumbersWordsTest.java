@@ -27,4 +27,10 @@ public class NumbersWordsTest {
     String expected = "ninety nine";
     assertEquals(expected, numbersWords.calculateNumber("99"));
   }
+  @Test
+  public void calculateNumber_forNinetyNineThroughOneThousand_900() {
+    NumbersWords numbersWords = new NumbersWords();
+    String expected = "nine hundred ninety nine";
+    assertEquals(expected, numbersWords.calculateNumber("999"));
+  }
 }
