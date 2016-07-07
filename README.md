@@ -4,7 +4,7 @@
 
 ## Description
 
-Write a method that translates numerical numbers into written words. For example, 384 into "three hundred eighty four". Use multiple hash maps and the .get() method. Start small, then get your code working for numbers up to 1 trillion. As always, implement tests throughout the development process, and make sure to commit frequently with clear and descriptive messages.
+Wrote a method that translates numerical numbers into written words. For example, 384 into "three hundred eighty four". Used multiple hash maps and the .get() method. Code works for numbers up to 1 trillion. Tests were implemented throughout the development process.
 
 ## Setup and Installation Requirements
 
